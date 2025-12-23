@@ -1,303 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mallorca Cannabis Associations</title>
-    <link rel="stylesheet" href="styles.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title >Mallorca Cannabis Associations</title>
+    <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
-</head>
+    <script src="translation.js" defer></script>
+  </head>
 
-    <body>
-     <!-- Navigation -->
+  <body>
+    <!-- Navigation -->
     <nav>
-        <div class="nav-container">
-            <a href="#home" class="nav-logo">🌿 Island Puffs</a>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active" data-section="home">Inicio</a></li>
-                <li><a href="#associations" class="nav-link" data-section="associations">Asociaciones</a></li>
-                <li><a href="#contact" class="nav-link" data-section="contact">Contacto</a></li>
-            </ul>
-        </div>
+      <div class="nav-container">
+        <a href="#home" class="nav-logo">🌿 Island Puffs</a>
+        <ul class="nav-menu">
+          <li>
+            <a href="#home" class="nav-link active" data-section="home" data-i18n="home">Home</a>
+          </li>
+          <li>
+            <a href="#associations" class="nav-link" data-section="associations" data-i18n="associations"
+              >Associations</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link" data-section="contact" data-i18n="contact"
+              >Contact</a
+            >
+          </li>
+          <button id="langBtn" aria-label="Change Language">
+            <img src="images/GR.png" alt="German" />
+          </button>
+        </ul>
+      </div>
     </nav>
 
     <!-- HOME SECTION -->
     <section id="home" class="active">
-        <div class="container">
-            <div class="hero">
-                <h1>Cannabis Mallorca</h1>
-                <p>Descubre asociaciones de calidad y confiables en toda la isla. Tu guía hacia una comunidad responsable y segura.</p>
-                <div class="hero-buttons">
-                    <button class="btn-primary" onclick="navigateTo('associations')">Ver Asociaciones</button>
-                    <button class="btn-secondary" onclick="scrollToInfo()">Más Información</button>
-                </div>
-            </div>
-
-            <!-- ABOUT US -->
-            <div class="content-section">
-                <h2>Sobre Nosotros</h2>
-                <div class="about-grid">
-                    <div class="about-content">
-                        <h3>Nuestra Misión</h3>
-                        <p>Somos una plataforma dedicada a la búsqueda, verificación y promoción de asociaciones de cannabis de calidad en Mallorca. Nos comprometemos a conectar a miembros responsables con comunidades confiables, transparentes y seguras.</p>
-                        <p>Trabajamos directamente con las asociaciones para garantizar que cumplan con los más altos estándares de seguridad, legalidad y profesionalismo.</p>
-                    </div>
-                    <div class="about-values">
-                        <div class="value-item">
-                            <h5>✓ Calidad</h5>
-                            <p>Seleccionamos solo asociaciones verificadas y responsables.</p>
-                        </div>
-                        <div class="value-item">
-                            <h5>✓ Confianza</h5>
-                            <p>Transparencia total en cada interacción y transacción.</p>
-                        </div>
-                        <div class="value-item">
-                            <h5>✓ Seguridad</h5>
-                            <p>Protegemos la privacidad y datos de nuestros usuarios.</p>
-                        </div>
-                        <div class="value-item">
-                            <h5>✓ Comunidad</h5>
-                            <p>Fomentamos espacios seguros para adultos responsables.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- CONSUMO RESPONSABLE -->
-            <div class="content-section">
-                <h2>Consumo Responsable</h2>
-                <p>El consumo responsable es fundamental para disfrutar de forma segura y legal. Aquí te compartimos las mejores prácticas:</p>
-                <div class="responsible-grid">
-                    <div class="responsible-card">
-                        <h4>🧠 Conoce tu Cuerpo</h4>
-                        <p>Comienza con dosis pequeñas y aumenta gradualmente según tu tolerancia. Cada persona es diferente, encuentra tu nivel óptimo.</p>
-                    </div>
-                    <div class="responsible-card">
-                        <h4>⏰ Elige el Momento</h4>
-                        <p>Consume en ambientes seguros y cómodos. Evita conducir o realizar actividades que requieran concentración.</p>
-                    </div>
-                    <div class="responsible-card">
-                        <h4>👥 Rodéate de Confianza</h4>
-                        <p>Comparte la experiencia solo con personas de confianza. Un buen ambiente es esencial para disfrutar responsablemente.</p>
-                    </div>
-                    <div class="responsible-card">
-                        <h4>🏥 Mantente Informado</h4>
-                        <p>Edúcate sobre el producto que consumes. Conoce la procedencia, potencia y efectos esperados.</p>
-                    </div>
-                    <div class="responsible-card">
-                        <h4>🚫 Respeta Límites</h4>
-                        <p>No es obligatorio consumir solo porque otros lo hagan. Tu salud y bienestar son prioritarios.</p>
-                    </div>
-                    <div class="responsible-card">
-                        <h4>💪 Cuida tu Salud</h4>
-                        <p>Si tienes condiciones médicas, consulta con un profesional. El consumo responsable respeta tu salud.</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- ADVERTENCIAS -->
-            <div class="content-section">
-                <h2>⚠️ Advertencias Importantes</h2>
-                <p>Es crucial estar informado sobre los riesgos asociados al consumo de cannabis:</p>
-                <div class="warning-grid">
-                    <div class="warning-card">
-                        <h4>Menores de Edad</h4>
-                        <p>El cannabis está prohibido para menores de 18 años. El cerebro sigue desarrollándose hasta los 25 años y el consumo puede afectar este proceso.</p>
-                    </div>
-                    <div class="warning-card">
-                        <h4>Embarazo y Lactancia</h4>
-                        <p>No se recomienda el consumo durante el embarazo ni la lactancia. Puede afectar el desarrollo del feto y pasarse al bebé.</p>
-                    </div>
-                    <div class="warning-card">
-                        <h4>Conducción</h4>
-                        <p>Nunca conduzcas bajo los efectos del cannabis. Afecta los reflejos y la capacidad de reacción. ¡Tu seguridad es primero!</p>
-                    </div>
-                    <div class="warning-card">
-                        <h4>Salud Mental</h4>
-                        <p>El cannabis puede desencadenar o agravar problemas de salud mental. Si tienes antecedentes de esquizofrenia o psicosis, consulta un especialista.</p>
-                    </div>
-                    <div class="warning-card">
-                        <h4>Dependencia</h4>
-                        <p>Aunque menos adictivo que otras sustancias, el uso frecuente puede crear dependencia psicológica. Consume con moderación.</p>
-                    </div>
-                    <div class="warning-card">
-                        <h4>Legalidad</h4>
-                        <p>El cannabis solo es legal en espacios privados asociativos. No lo transporte en la calle ni lo consuma en lugares públicos.</p>
-                    </div>
-                </div>
-            </div>
+      <div class="container">
+        <div class="hero">
+          <h1>Island Puffs</h1>
+          <p data-i18n="heroSubtitle">
+            Discover quality and reliable associations throughout the island.
+            Your guide to a responsible and safe community.
+          </p>
+          <div class="hero-buttons">
+            <button class="btn-primary" onclick="navigateTo('associations')" data-i18n="viewAssociations">
+              View Associations
+            </button>
+            <button class="btn-secondary" onclick="scrollToInfo()" data-i18n="moreInformation">
+              More Information
+            </button>
+          </div>
         </div>
+
+        <!-- ABOUT US -->
+        <div class="content-section">
+          <h2 data-i18n="aboutUs">About Us</h2>
+          <div class="about-grid">
+            <div class="about-content">
+              <h3 data-i18n="ourMission">Our Mission</h3>
+              <p data-i18n="aboutUsText">
+                We are a platform dedicated to the search, verification and
+                promotion of quality cannabis associations in Mallorca. We are
+                committed to connecting responsible members with reliable,
+                transparent and safe communities.
+              </p>
+              <p data-i18n="aboutUsText2">
+                We work directly with associations to ensure they meet the
+                highest standards of safety, legality and professionalism.
+              </p>
+            </div>
+            <div class="about-values">
+              <div class="value-item">
+                <h5 data-i18n="quality">✓ Quality</h5>
+                <p data-i18n="qualityDesc">We select only verified and responsible associations.</p>
+              </div>
+              <div class="value-item">
+                <h5 data-i18n="trust">✓ Trust</h5>
+                <p data-i18n="trustDesc">Total transparency in every interaction and transaction.</p>
+              </div>
+              <div class="value-item">
+                <h5 data-i18n="security">✓ Security</h5>
+                <p data-i18n="securityDesc">We protect the privacy and data of our users.</p>
+              </div>
+              <div class="value-item">
+                <h5 data-i18n="community">✓ Community</h5>
+                <p data-i18n="communityDesc">We foster safe spaces for responsible adults.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CONSUMO RESPONSABLE -->
+        <div class="content-section">
+          <h2 data-i18n="responsibleConsumption">Responsible Consumption</h2>
+          <p data-i18n="responsibleConsumptionText">
+            Responsible consumption is essential for safe and legal enjoyment.
+            Here are some best practices:
+          </p>
+          <div class="responsible-grid">
+            <div class="responsible-card">
+              <h4 data-i18n="knowYourBody">Know Your Body</h4>
+              <p data-i18n="knowYourBodyText">
+                Start with small doses and gradually increase according to your
+                tolerance. Everyone is different, find your optimal level.
+              </p>
+            </div>
+            <div class="responsible-card">
+              <h4 data-i18n="chooseTheMoment">Choose the Moment</h4>
+              <p data-i18n="chooseTheMomentText">
+                Consume in safe and comfortable environments. Avoid driving or
+                performing activities that require concentration.
+              </p>
+            </div>
+            <div class="responsible-card">
+              <h4 data-i18n="surroundWithTrust">Surround Yourself with Trust</h4>
+              <p data-i18n="surroundWithTrustText">
+                Share the experience only with trusted people. A good
+                environment is essential for responsible enjoyment.
+              </p>
+            </div>
+            <div class="responsible-card">
+              <h4 data-i18n="stayInformed">🏥 Stay Informed</h4>
+              <p data-i18n="stayInformedText">
+                Learn about the product you consume. Know the origin, potency
+                and expected effects.
+              </p>
+            </div>
+            <div class="responsible-card">
+              <h4 data-i18n="respectLimits">🚫 Respect Limits</h4>
+              <p data-i18n="respectLimitsText">
+                You are not obligated to consume just because others do. Your
+                health and well-being are priorities.
+              </p>
+            </div>
+            <div class="responsible-card">
+              <h4 data-i18n="takeCareOfHealth">💪 Take Care of Your Health</h4>
+              <p data-i18n="takeCareOfHealthText">
+                If you have medical conditions, consult a professional.
+                Responsible consumption respects your health.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ADVERTENCIAS -->
+        <div class="content-section">
+          <h2 data-i18n="importantWarnings">⚠️ Important Warnings</h2>
+          <p data-i18n="warningsText">
+            It is crucial to be informed about the risks associated with
+            cannabis consumption:
+          </p>
+          <div class="warning-grid">
+            <div class="warning-card">
+              <h4 data-i18n="minors">Minors</h4>
+              <p data-i18n="minorsText">
+                Cannabis is prohibited for minors under 18. The brain continues
+                developing until age 25, and consumption can affect this
+                process.
+              </p>
+            </div>
+            <div class="warning-card">
+              <h4 data-i18n="pregnancy">Pregnancy and Lactation</h4>
+              <p data-i18n="pregnancyText">
+                Consumption is not recommended during pregnancy or lactation. It
+                can affect fetal development and pass into the baby.
+              </p>
+            </div>
+            <div class="warning-card">
+              <h4 data-i18n="driving">Driving</h4>
+              <p data-i18n="drivingText">
+                Never drive under the effects of cannabis. It affects reflexes
+                and reaction capacity. Your safety is first!
+              </p>
+            </div>
+            <div class="warning-card">
+              <h4 data-i18n="mentalHealth">Health Mental</h4>
+              <p data-i18n="mentalHealthText">
+                Cannabis can trigger or worsen mental health problems. If you
+                have a history of schizophrenia or psychosis, consult a
+                specialist.
+              </p>
+            </div>
+            <div class="warning-card">
+              <h4 data-i18n="dependency">Dependency</h4>
+              <p data-i18n="dependencyText">
+                Although less addictive than other substances, frequent use can
+                create psychological dependence. Consume with moderation.
+              </p>
+            </div>
+            <div class="warning-card">
+              <h4 data-i18n="legality">Legality</h4>
+              <p data-i18n="legalityText">
+                Cannabis is only legal in private associative spaces. Do not
+                transport it on the street or consume it in public places.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- ASSOCIATIONS SECTION -->
     <section id="associations">
-        <div class="container">
-            <div class="search-section">
-                <h2 style="color: #1a472a; font-size: 2.2em; margin-bottom: 30px; font-weight: 700;">Busca tu Asociación</h2>
-                <div class="search-box">
-                    <input type="text" id="searchInput" placeholder="Buscar por nombre o ubicación...">
-                    <button onclick="searchAssociations()">Buscar</button>
-                </div>
-                <div class="filter-tags">
-                    <div class="filter-tag active" onclick="filterByType(this, 'all')">Todas</div>
-                    <div class="filter-tag" onclick="filterByType(this, 'palma')">Palma</div>
-                    <div class="filter-tag" onclick="filterByType(this, 'soller')">Sóller</div>
-                    <div class="filter-tag" onclick="filterByType(this, 'alcudia')">Alcúdia</div>
-                    <div class="filter-tag" onclick="filterByType(this, 'andratx')">Andratx</div>
-                </div>
+      <div class="container">
+        <div class="search-section">
+          <h2
+            style="
+              color: #1a472a;
+              font-size: 2.2em;
+              margin-bottom: 30px;
+              font-weight: 700;
+            "
+            data-i18n="searchYourAssociation">
+            Search your association
+          </h2>
+          <div class="search-box">
+            <input 
+            data-i18n="searchInput"
+              type="text"
+              id="searchInput"
+              placeholder="Search by name or location..."
+            />
+            <button onclick="searchAssociations()" data-i18n="searchButton">Search</button>
+          </div>
+          <div class="filter-tags">
+            <div class="filter-tag active" onclick="filterByType(this, 'all')" data-i18n="all">
+              All
             </div>
-
-            <div class="associations-grid" id="associationsGrid">
-                <!-- Cards will be generated here -->
+            <div class="filter-tag" onclick="filterByType(this, 'palma')">
+              Palma
             </div>
-
-            <div id="emptyState" class="empty-state" style="display: none;">
-                <h2>No se encontraron asociaciones</h2>
-                <p>Intenta ajustar tu búsqueda o filtros</p>
+            <div class="filter-tag" onclick="filterByType(this, 'soller')">
+              Sóller
             </div>
+            <div class="filter-tag" onclick="filterByType(this, 'alcudia')">
+              Alcúdia
+            </div>
+            <div class="filter-tag" onclick="filterByType(this, 'andratx')">
+              Andratx
+            </div>
+          </div>
         </div>
+
+        <div class="associations-grid" id="associationsGrid">
+          <!-- Cards will be generated here -->
+        </div>
+
+        <div id="emptyState" class="empty-state" style="display: none">
+          <h2 data-i18n="noAssociationsFound">No associations were found.</h2>
+          <p data-i18n="tryAdjustingSearch">Try adjusting your search or filters</p>
+        </div>
+      </div>
     </section>
 
     <!-- CONTACT SECTION -->
     <section id="contact">
-        <div class="container">
-            <div class="content-section" style="margin-bottom: 40px;">
-                <h2>Contacto</h2>
-                <p>¿Tienes preguntas o sugerencias? Nos encantaría escucharte. Completa el formulario de abajo o utiliza la información de contacto directo.</p>
-            </div>
-
-            <div class="contact-wrapper">
-                <div class="contact-info">
-                    <h3>Información de Contacto</h3>
-                    <div class="contact-item">
-                        <strong>📧 Email</strong>
-                        <p><a href="mailto:info@cannabismallorca.com">info@cannabismallorca.com</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>📞 Teléfono</strong>
-                        <p><a href="tel:+34971123456">+34 971 123 456</a></p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>📍 Ubicación</strong>
-                        <p>Palma, Mallorca<br>Islas Baleares, España</p>
-                    </div>
-                    <div class="contact-item">
-                        <strong>⏰ Horario</strong>
-                        <p>Lunes a Viernes: 10:00 - 18:00<br>Sábado: 11:00 - 14:00</p>
-                    </div>
-                </div>
-
-                <form id="contactForm" class="contact-form" onsubmit="submitContactForm(event)">
-                    <h3>Envíanos tu Mensaje</h3>
-                    <div class="form-group">
-                        <label for="contactName">Nombre Completo *</label>
-                        <input type="text" id="contactName" name="name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactEmail">Email *</label>
-                        <input type="email" id="contactEmail" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactPhone">Teléfono</label>
-                        <input type="tel" id="contactPhone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="contactSubject">Asunto *</label>
-                        <input type="text" id="contactSubject" name="subject" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="contactMessage">Mensaje *</label>
-                        <textarea id="contactMessage" name="message" required></textarea>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit" class="btn-submit">Enviar Mensaje</button>
-                        <button type="reset" class="btn-cancel">Limpiar</button>
-                    </div>
-                </form>
-            </div>
+      <div class="container">
+        <div class="content-section" style="margin-bottom: 40px">
+          <h2 data-i18n="contact">Contact</h2>
+          <p data-i18n="contactText">
+            Do you have questions or suggestions? We'd love to hear from you.
+            Complete the form below or use the direct contact information.
+          </p>
         </div>
+
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3 data-i18n="contactInformation">Contact Information</h3>
+            <div class="contact-item">
+              <strong data-i18n="email">📧 Email</strong>
+              <p>
+                <a href="mailto:info@cannabismallorca.com"
+                  >info@cannabismallorca.com</a
+                >
+              </p>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="phone">📞 Teléfono</strong>
+              <p><a href="tel:+34971123456">+34 971 123 456</a></p>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="location">📍 Ubication</strong>
+              <p>Palma, Mallorca<br />Islas Baleares, España</p>
+            </div>
+            <div class="contact-item">
+              <strong data-i18n="contactHours">⏰ Contact hours</strong>
+              <p>Monday to Friday 10:00 - 18:00<br />Saturday: 11:00 - 14:00</p>
+            </div>
+          </div>
+
+          <form
+            id="contactForm"
+            class="contact-form"
+            onsubmit="submitContactForm(event)"
+          >
+            <h3 data-i18n="sendYourMessage">Send us your Message</h3>
+            <div class="form-group">
+              <label for="contactName" data-i18n="fullName">Full Name *</label>
+              <input type="text" id="contactName" name="name" required />
+            </div>
+            <div class="form-group">
+              <label for="contactEmail" data-i18n="email">Email *</label>
+              <input type="email" id="contactEmail" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="contactPhone" data-i18n="phone">Phone</label>
+              <input type="tel" id="contactPhone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="contactSubject" data-i18n="subject">Subject *</label>
+              <input type="text" id="contactSubject" name="subject" required />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" data-i18n="message">Message *</label>
+              <textarea id="contactMessage" name="message" required></textarea>
+            </div>
+            <div class="form-buttons">
+              <button type="submit" class="btn-submit" data-i18n="sendMessage">Send Message</button>
+              <button type="reset" class="btn-cancel" data-i18n="clear">Clear</button>
+            </div>
+          </form>
+        </div>
+      </div>
     </section>
 
     <!-- INFO MODAL -->
     <div id="infoModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2 id="infoTitle"></h2>
-                <button class="close-btn" onclick="closeInfoModal()">&times;</button>
-            </div>
-            <div class="modal-body" id="infoBody"></div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="infoTitle"></h2>
+          <button class="close-btn" onclick="closeInfoModal()">&times;</button>
         </div>
+        <div class="modal-body" id="infoBody"></div>
+      </div>
     </div>
 
     <!-- JOIN MODAL -->
     <div id="joinModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>Solicitud de Ingreso a <span id="joinAssociationName"></span></h2>
-                <button class="close-btn" onclick="closeJoinModal()">&times;</button>
-            </div>
-            <div class="modal-body">
-                <form id="joinForm" onsubmit="submitJoinForm(event)">
-                    <div class="form-group">
-                        <label for="fullName">Nombre Completo *</label>
-                        <input type="text" id="fullName" name="fullName" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Teléfono</label>
-                        <input type="tel" id="phone" name="phone">
-                    </div>
-                    <div class="form-group">
-                        <label for="nationality">Nacionalidad</label>
-                        <input type="text" id="nationality" name="nationality">
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Mensaje a la Asociación</label>
-                        <textarea id="message" name="message"></textarea>
-                    </div>
-                    <div class="form-buttons">
-                        <button type="submit" class="btn-submit">Enviar Solicitud</button>
-                        <button type="button" class="btn-cancel" onclick="closeJoinModal()">Cancelar</button>
-                    </div>
-                </form>
-            </div>
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 data-i18n="joinRequest">Join Request to <span id="joinAssociationName"></span></h2>
+          <button class="close-btn" onclick="closeJoinModal()">&times;</button>
         </div>
+        <div class="modal-body">
+          <form id="joinForm" onsubmit="submitJoinForm(event)">
+            <div class="form-group">
+              <label for="fullName" data-i18n="fullName">Full Name *</label>
+              <input type="text" id="fullName" name="fullName" required />
+            </div>
+            <div class="form-group">
+              <label for="email" data-i18n="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+            </div>
+            <div class="form-group">
+              <label for="phone" data-i18n="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" />
+            </div>
+            <div class="form-group">
+              <label for="nationality" data-i18n="nationality">Nationality</label>
+              <input type="text" id="nationality" name="nationality" />
+            </div>
+            <div class="form-group">
+              <label for="message" data-i18n="messageToAssociation">Message to the Association</label>
+              <textarea id="message" name="message"></textarea>
+            </div>
+            <div class="form-buttons">
+              <button type="submit" class="btn-submit" data-i18n="sendRequest">Send Request</button>
+              <button
+                type="button"
+                class="btn-cancel"
+                onclick="closeJoinModal()" data-i18n="cancel"
+              >
+                Cancel
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
 
     <!-- FOOTER -->
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Sobre Nosotros</h4>
-                <p>Tu plataforma confiable para encontrar asociaciones de cannabis de calidad en Mallorca. Conectando comunidades responsables.</p>
-            </div>
-            <div class="footer-section">
-                <h4>Enlaces Rápidos</h4>
-                <a href="#associations" onclick="navigateTo('associations')">Asociaciones</a>
-                <a href="#contact" onclick="navigateTo('contact')">Contacto</a>
-                <a href="#home" onclick="navigateTo('home')">Inicio</a>
-            </div>
-            <div class="footer-section">
-                <h4>Contacto</h4>
-                <p>📧 <a href="mailto:info@cannabismallorca.com">info@cannabismallorca.com</a></p>
-                <p>📞 +34 971 123 456</p>
-                <p>📍 Palma, Mallorca, España</p>
-            </div>
-            <div class="footer-section">
-                <h4>Síguenos</h4>
-                <div class="footer-social">
-                    <a href="#" title="Facebook">f</a>
-                    <a href="#" title="Instagram">📷</a>
-                    <a href="#" title="Twitter">𝕏</a>
-                </div>
-            </div>
+      <div class="footer-container">
+        <div class="footer-section">
+          <h4 data-i18n="aboutUs">About Us</h4>
+          <p data-i18n="footerAboutUs">
+            Your reliable platform to find quality cannabis associations in
+            Mallorca. Connecting responsible communities.
+          </p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Cannabis Mallorca. Todos los derechos reservados. | <a href="#" style="color: #b0f4b8; text-decoration: none;">Política de Privacidad</a> | <a href="#" style="color: #b0f4b8; text-decoration: none;">Términos y Condiciones</a></p>
+        <div class="footer-section">
+          <h4 data-i18n="quickLinks">Quick Links</h4>
+          <a href="#associations" onclick="navigateTo('associations')" data-i18n="associations"
+            >Associations</a
+          >
+          <a href="#contact" onclick="navigateTo('contact')" data-i18n="contact">Contact</a>
+          <a href="#home" onclick="navigateTo('home')" data-i18n="home">Home</a>
         </div>
+        <div class="footer-section">
+          <h4 data-i18n="contact">Contact</h4>
+          <p>
+            📧
+            <a href="mailto:info@cannabismallorca.com"
+              >info@cannabismallorca.com</a
+            >
+          </p>
+          <p>📞 +34 971 123 456</p>
+          <p>📍 Palma, Mallorca, España</p>
+        </div>
+        <div class="footer-section">
+          <h4 data-i18n="followUs">Follow Us</h4>
+          <div class="footer-social">
+            <a href="#" title="Facebook">f</a>
+            <a href="#" title="Instagram">📷</a>
+            <a href="#" title="Twitter">𝕏</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>
+          &copy; 2024 Cannabis Mallorca. All rights reserved. |
+          <a href="#" style="color: #b0f4b8; text-decoration: none"
+            >Privacy Policy</a
+          >
+          |
+          <a href="#" style="color: #b0f4b8; text-decoration: none"
+            >Terms and Conditions</a
+          >
+        </p>
+      </div>
     </footer>
-    </body>
-    </html>
+  </body>
+</html>
