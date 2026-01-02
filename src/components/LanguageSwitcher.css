@@ -1,0 +1,32 @@
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  color: var(--color-text-muted);
+}
+
+.language-switcher:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+.language-switcher span {
+  transition: all var(--transition-base);
+}
+
+.language-switcher span.active {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.language-switcher .divider {
+  color: var(--color-border);
+}

@@ -1,0 +1,61 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "searcher": "Clubs Finden",
+    "contact": "Kontakt"
+  },
+  "home": {
+    "hero": {
+      "title": "Entdecken Sie Cannabis-Vereinigungen auf Mallorca",
+      "subtitle": "Ihr vertrauenswürdiger Leitfaden zum Finden legaler Cannabis Social Clubs auf der Insel",
+      "cta": "Jetzt Clubs Finden"
+    },
+    "warnings": {
+      "title": "Wichtige Informationen",
+      "age": "Sie müssen mindestens 18 Jahre alt sein, um Zugang zu Cannabis-Vereinigungen zu erhalten.",
+      "legal": "Cannabis-Vereinigungen operieren nach spanischem Recht. Eine Mitgliedschaft ist erforderlich und der Konsum ist nur in den Räumlichkeiten gestattet.",
+      "health": "Cannabiskonsum kann gesundheitliche Auswirkungen haben. Bitte konsumieren Sie verantwortungsvoll.",
+      "private": "Dies sind private Vereinigungen, keine kommerziellen Einrichtungen."
+    },
+    "about": {
+      "title": "Über Uns",
+      "description": "Wir bieten ein umfassendes Verzeichnis legaler Cannabis-Vereinigungen auf Mallorca. Unsere Mission ist es, verantwortungsbewusste Erwachsene mit legitimen Social Clubs zu verbinden und gleichzeitig sicheren und legalen Cannabiskonsum zu fördern.",
+      "mission": "Unsere Plattform hilft Ihnen, verifizierte Cannabis-Vereinigungen auf ganz Mallorca zu entdecken und stellt sicher, dass Sie Zugang zu genauen Informationen über Standorte, Ausstattung und Mitgliedschaftsanforderungen haben.",
+      "values": "Wir glauben an Transparenz, Verantwortung und Gemeinschaft. Alle auf unserer Plattform aufgeführten Vereinigungen operieren im Rahmen der spanischen Rechtsvorschriften."
+    }
+  },
+  "searcher": {
+    "title": "Finden Sie Ihren Perfekten Club",
+    "subtitle": "Durchsuchen Sie unsere kuratierte Liste von Cannabis-Vereinigungen auf Mallorca",
+    "searchPlaceholder": "Nach Name suchen...",
+    "locationLabel": "Nach Standort Filtern",
+    "allLocations": "Alle Standorte",
+    "noResults": "Keine Vereinigungen gefunden, die Ihren Kriterien entsprechen.",
+    "tryAgain": "Versuchen Sie, Ihre Suchfilter anzupassen.",
+    "members": "Mitglieder",
+    "viewDetails": "Details Anzeigen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie Uns",
+    "subtitle": "Haben Sie Fragen? Wir sind hier, um zu helfen.",
+    "form": {
+      "name": "Ihr Name",
+      "email": "Ihre E-Mail",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht Senden",
+      "sending": "Wird gesendet...",
+      "success": "Nachricht erfolgreich gesendet!",
+      "error": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "title": "Kontaktinformationen",
+      "email": "info@islandpuff.com",
+      "location": "Palma de Mallorca, Spanien",
+      "hours": "Montag - Freitag: 9:00 - 18:00 Uhr"
+    }
+  },
+  "language": {
+    "english": "Englisch",
+    "german": "Deutsch"
+  }
+}
