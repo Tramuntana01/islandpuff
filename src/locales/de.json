@@ -33,7 +33,34 @@
     "noResults": "Keine Vereinigungen gefunden, die Ihren Kriterien entsprechen.",
     "tryAgain": "Versuchen Sie, Ihre Suchfilter anzupassen.",
     "members": "Mitglieder",
-    "viewDetails": "Details Anzeigen"
+    "viewDetails": "Details Anzeigen",
+    "joinClub": "Club Beitreten",
+    "detailsModal": {
+      "title": "Vereinigungsdetails",
+      "description": "Beschreibung",
+      "location": "Standort",
+      "members": "Mitglieder",
+      "founded": "Gegründet",
+      "amenities": "Ausstattung",
+      "hours": "Öffnungszeiten",
+      "membership": "Mitgliedschaftsanforderungen",
+      "close": "Schließen"
+    },
+    "joinModal": {
+      "title": "Beitreten",
+      "subtitle": "Füllen Sie das Formular aus, um eine Mitgliedschaft zu beantragen",
+      "fullName": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "age": "Alter",
+      "idNumber": "Ausweisnummer",
+      "message": "Warum möchten Sie beitreten?",
+      "submit": "Antrag Einreichen",
+      "submitting": "Wird eingereicht...",
+      "success": "Antrag erfolgreich eingereicht! Wir werden uns bald bei Ihnen melden.",
+      "error": "Antrag konnte nicht eingereicht werden. Bitte versuchen Sie es erneut.",
+      "cancel": "Abbrechen"
+    }
   },
   "contact": {
     "title": "Kontaktieren Sie Uns",

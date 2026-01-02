@@ -33,7 +33,34 @@
     "noResults": "No associations found matching your criteria.",
     "tryAgain": "Try adjusting your search filters.",
     "members": "members",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "joinClub": "Join Club",
+    "detailsModal": {
+      "title": "Association Details",
+      "description": "Description",
+      "location": "Location",
+      "members": "Members",
+      "founded": "Founded",
+      "amenities": "Amenities",
+      "hours": "Opening Hours",
+      "membership": "Membership Requirements",
+      "close": "Close"
+    },
+    "joinModal": {
+      "title": "Join",
+      "subtitle": "Fill out the form below to request membership",
+      "fullName": "Full Name",
+      "email": "Email Address",
+      "phone": "Phone Number",
+      "age": "Age",
+      "idNumber": "ID Number",
+      "message": "Why do you want to join?",
+      "submit": "Submit Application",
+      "submitting": "Submitting...",
+      "success": "Application submitted successfully! We'll contact you soon.",
+      "error": "Failed to submit application. Please try again.",
+      "cancel": "Cancel"
+    }
   },
   "contact": {
     "title": "Get in Touch",
