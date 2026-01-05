@@ -11,7 +11,6 @@ function Navigation() {
     <nav className="navigation">
       <div className="container nav-container">
         <Link to="/" className="logo">
-          <span className="logo-icon">🌿</span>
           <span className="logo-text">IslandPuff</span>
         </Link>
         

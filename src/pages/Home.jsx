@@ -19,6 +19,7 @@ function Home() {
           </div>
         </div>
         <div className="hero-gradient"></div>
+        <div className="hero-bg-image"></div>
       </section>
 
       {/* Warnings Section */}

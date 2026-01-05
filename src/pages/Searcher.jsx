@@ -210,7 +210,6 @@ function Searcher() {
         {/* Search Controls */}
         <div className="search-controls fade-in">
           <div className="search-bar">
-            <span className="search-icon">🔍</span>
             <input
               type="text"
               className="input search-input"
@@ -300,13 +299,22 @@ function Searcher() {
                        {t('searcher.viewDetails')}
                       </button>
                       <button 
+                        className="btn btn-primary btn-small mt-sm"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setJoinModal(association);
+                        }}
+                      >
+                        {t('searcher.joinClub')}
+                      </button>
+                      <button 
                         className="btn btn-secondary btn-small flip-back-btn"
                         onClick={(e) => {
                           e.stopPropagation();
                           setFlippedCardId(null);
                         }}
                       >
-                        ↩ Return
+                        ↩
                       </button>
                     </div>
                   </div>

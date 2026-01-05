@@ -18,9 +18,9 @@ function Footer() {
           <div className="footer-section">
             <h4>{t('footer.links', 'Quick Links')}</h4>
             <ul className="footer-links">
-              <li><Link to="/">{t('navigation.home')}</Link></li>
-              <li><Link to="/searcher">{t('navigation.searcher')}</Link></li>
-              <li><Link to="/contact">{t('navigation.contact')}</Link></li>
+              <li><Link to="/">{t('nav.home')}</Link></li>
+              <li><Link to="/searcher">{t('nav.searcher')}</Link></li>
+              <li><Link to="/contact">{t('nav.contact')}</Link></li>
             </ul>
           </div>
           

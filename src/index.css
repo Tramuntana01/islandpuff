@@ -2,9 +2,9 @@
 
 :root {
   /* Color Palette - High Contrast Modern (Darker/Smoother) */
-  --color-primary: #00bf80;  /* Slightly darker Mint Green */
-  --color-primary-dark: #008f60;
-  --color-primary-light: #33ffbb;
+  --color-primary: #23ede6;  /* Slightly darker Mint Green */
+  --color-primary-dark: #17f7ff;
+  --color-primary-light: #fff533;
   --color-secondary: #8a3dc2; /* Slightly darker Electric Purple */
   --color-secondary-dark: #6a229e;
   --color-accent: #ffb703;
@@ -19,7 +19,7 @@
   --color-border: #3f3f46;   /* Zinc 700 - Visible borders */
   
   /* Gradients */
-  --gradient-primary: linear-gradient(135deg, #00e599 0%, #00b377 100%);
+  --gradient-primary: linear-gradient(135deg, #10674a 0%, #06c384 100%);
   --gradient-hero: linear-gradient(135deg, #09090b 0%, #18181b 50%, #003322 100%);
   --gradient-card: linear-gradient(135deg, rgba(0, 229, 153, 0.05) 0%, rgba(157, 78, 221, 0.05) 100%);
   
