@@ -56,18 +56,129 @@
   margin-bottom: 3rem;
 }
 
-.association-card {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  padding: 1.5rem;
+/* Association Cards - 3D Flip */
+.association-card-container {
+  perspective: 1000px;
   height: 100%;
+  min-height: 500px; /* Fix for absolute positioning collapse */
 }
 
+.association-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  background: transparent; /* Remove background from container as faces handle it */
+  border: none;
+  box-shadow: none; /* Shadow handled by faces or container if needed */
+}
+
+/* Trigger flip on hover of the specific image container, or the whole card for stability. 
+   User asked for "hover on the image". To prevent flickering, we keep it consistent:
+   If we only hover image, as soon as it flips, hover is lost.
+   We'll treat the card hover as the trigger for the flip to ensure usability.
+*/
+.association-card.flipped {
+  transform: rotateY(180deg);
+}
+
+.association-card-front, .association-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--color-border);
+  background: var(--color-surface);
+}
+
+/* Front Styling */
+.association-card-front {
+  display: flex;
+  flex-direction: column;
+  padding: 1.5rem;
+  z-index: 2;
+}
+
+/* Back Styling */
+.association-card-back {
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.card-back-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.card-back-overlay {
+  position: relative;
+  z-index: 2;
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  padding: 2rem;
+  text-align: center;
+}
+
+.card-back-overlay h3 {
+  font-size: 1.5rem;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.flip-back-btn {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: white;
+  margin-top: 1rem;
+}
+
+.flip-back-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: white;
+}
+
+/* Original Card Content Styling adjustments */
+.association-image-container {
+  width: 100%;
+  height: 160px;
+  overflow: hidden;
+  border-radius: var(--radius-md);
+  margin-bottom: 1rem;
+}
+
+.association-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Inner Card Styles */
 .association-header {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .association-header h3 {
@@ -90,6 +201,7 @@
   font-size: 0.95rem;
   color: var(--color-text-muted);
   line-height: 1.6;
+  margin-bottom: 1rem;
 }
 
 .association-footer {
@@ -98,6 +210,7 @@
   gap: 1rem;
   padding-top: 1rem;
   border-top: 1px solid var(--color-border);
+  margin-top: auto;
 }
 
 .association-actions {
@@ -120,6 +233,21 @@
 .btn-small {
   padding: 0.5rem 1rem;
   font-size: 0.875rem;
+}
+
+/* Details Modal Background */
+.modal-content {
+  background: linear-gradient(rgba(18, 18, 20, 0.95), rgba(18, 18, 20, 0.95)), url('../assets/marijuana-pattern-dark.png');
+  background-size: 200px;
+  background-repeat: repeat;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border);
+  max-width: 600px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideInUp 0.3s ease-out;
 }
 
 /* No Results */

@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import './Searcher.css';
+import clubPlaceholder from '../assets/club-placeholder.png';
+import clubInterior from '../assets/club-interior.png';
 
 // Sample association data with more details
 const associations = [
@@ -153,6 +155,7 @@ function Searcher() {
     message: ''
   });
   const [joinStatus, setJoinStatus] = useState('');
+  const [flippedCardId, setFlippedCardId] = useState(null);
 
   // Get unique locations
   const locations = [...new Set(associations.map(a => a.location))].sort();
@@ -239,31 +242,73 @@ function Searcher() {
             {filteredAssociations.map((association, index) => (
               <div 
                 key={association.id} 
-                className="association-card card fade-in"
+                className="association-card-container fade-in"
                 style={{ animationDelay: `${index * 0.05}s` }}
+                onMouseEnter={() => setFlippedCardId(association.id)}
+                onMouseLeave={() => setFlippedCardId(null)}
               >
-                <div className="association-header">
-                  <h3>{association.name}</h3>
-                  <span className="location-badge">📍 {association.location}</span>
-                </div>
-                <p className="association-description">{association.description}</p>
-                <div className="association-footer">
-                  <span className="members-count">
-                    👥 {association.members} {t('searcher.members')}
-                  </span>
-                  <div className="association-actions">
-                    <button 
-                      className="btn btn-secondary btn-small"
-                      onClick={() => setDetailsModal(association)}
-                    >
-                      {t('searcher.viewDetails')}
-                    </button>
-                    <button 
-                      className="btn btn-primary btn-small"
-                      onClick={() => setJoinModal(association)}
-                    >
-                      {t('searcher.joinClub')}
-                    </button>
+                <div className={`association-card ${flippedCardId === association.id ? 'flipped' : ''}`}>
+                  {/* Front Side */}
+                  <div className="association-card-front">
+                    <div className="association-image-container">
+                      <img src={clubPlaceholder} alt={association.name} className="association-image" />
+                    </div>
+                    <div className="association-header">
+                      <h3>{association.name}</h3>
+                      <span className="location-badge">📍 {association.location}</span>
+                    </div>
+                    <p className="association-description">{association.description}</p>
+                    <div className="association-footer">
+                      <span className="members-count">
+                        👥 {association.members} {t('searcher.members')}
+                      </span>
+                      <div className="association-actions">
+                        <button 
+                          className="btn btn-secondary btn-small"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setDetailsModal(association);
+                          }}
+                        >
+                          {t('searcher.viewDetails')}
+                        </button>
+                        <button 
+                          className="btn btn-primary btn-small"
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setJoinModal(association);
+                          }}
+                        >
+                          {t('searcher.joinClub')}
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Back Side */}
+                  <div className="association-card-back">
+                    <img src={clubInterior} alt="Club Interior" className="card-back-image" />
+                    <div className="card-back-overlay">
+                      <h3>{association.name}</h3>
+                      <button 
+                        className="btn btn-primary"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setDetailsModal(association);
+                        }}
+                      >
+                       {t('searcher.viewDetails')}
+                      </button>
+                      <button 
+                        className="btn btn-secondary btn-small flip-back-btn"
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setFlippedCardId(null);
+                        }}
+                      >
+                        ↩ Return
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
 
 :root {
-  /* Color Palette - High Contrast Modern */
-  --color-primary: #00e599;  /* Vibrant Mint Green */
-  --color-primary-dark: #00b377;
+  /* Color Palette - High Contrast Modern (Darker/Smoother) */
+  --color-primary: #00bf80;  /* Slightly darker Mint Green */
+  --color-primary-dark: #008f60;
   --color-primary-light: #33ffbb;
-  --color-secondary: #9d4edd; /* Electric Purple */
-  --color-secondary-dark: #7b2cbf;
+  --color-secondary: #8a3dc2; /* Slightly darker Electric Purple */
+  --color-secondary-dark: #6a229e;
   --color-accent: #ffb703;
   
   /* Neutrals - Deep Dark Theme */
@@ -144,8 +144,8 @@ p {
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: var(--shadow-xl), 0 0 30px rgba(0, 229, 153, 0.6);
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: var(--shadow-xl), 0 0 30px rgba(0, 191, 128, 0.4);
 }
 
 .btn-secondary {
@@ -156,7 +156,7 @@ p {
 
 .btn-secondary:hover {
   border-color: var(--color-primary);
-  transform: translateY(-2px);
+  transform: translateY(-2px) scale(1.05);
 }
 
 /* Cards */
