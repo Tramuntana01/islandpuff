@@ -27,9 +27,9 @@ function Footer() {
           <div className="footer-section">
             <h4>{t('footer.legal', 'Legal')}</h4>
             <ul className="footer-links">
-              <li><a href="#">{t('footer.terms', 'Terms of Service')}</a></li>
-              <li><a href="#">{t('footer.privacy', 'Privacy Policy')}</a></li>
-              <li><a href="#">{t('footer.cookies', 'Cookie Policy')}</a></li>
+              <li><Link to="/terms">{t('footer.terms', 'Terms of Service')}</Link></li>
+              <li><Link to="/privacy">{t('footer.privacy', 'Privacy Policy')}</Link></li>
+              <li><Link to="/cookies">{t('footer.cookies', 'Cookie Policy')}</Link></li>
             </ul>
           </div>
           

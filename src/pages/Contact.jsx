@@ -7,14 +7,17 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    message: ''
+    email: '',
+    message: '',
+    legal: false
   });
   const [status, setStatus] = useState(''); // 'sending', 'success', 'error'
 
   const handleChange = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: value
     });
   };
 
@@ -82,6 +85,24 @@ function Contact() {
                 />
               </div>
 
+              <div className="form-group checkbox-group">
+                <label className="checkbox-label">
+                  <input
+                    type="checkbox"
+                    name="legal"
+                    checked={formData.legal}
+                    onChange={handleChange}
+                    required
+                  />
+                  <span>
+                    {t('contact.form.legal_prefix', '')} 
+                    <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> 
+                    {' & '} 
+                    <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                  </span>
+                </label>
+              </div>
+
               <button 
                 type="submit" 
                 className="btn btn-primary btn-full"
@@ -113,8 +134,8 @@ function Contact() {
                 <span className="info-icon">📧</span>
                 <div>
                   <div className="info-label">Email</div>
-                  <a href="mailto:info@islandpuff.com" className="info-value">
-                    {t('contact.info.email')}
+                  <a href="mailto:islandpuffmallorca@gmail.com" className="info-value">
+                    islandpuffmallorca@gmail.com
                   </a>
                 </div>
               </div>

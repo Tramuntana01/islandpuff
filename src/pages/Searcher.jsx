@@ -152,7 +152,9 @@ function Searcher() {
     phone: '',
     age: '',
     idNumber: '',
-    message: ''
+    idNumber: '',
+    message: '',
+    legal: false
   });
   const [joinStatus, setJoinStatus] = useState('');
   const [flippedCardId, setFlippedCardId] = useState(null);
@@ -168,9 +170,10 @@ function Searcher() {
   });
 
   const handleJoinChange = (e) => {
+    const value = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
     setJoinFormData({
       ...joinFormData,
-      [e.target.name]: e.target.value
+      [e.target.name]: value
     });
   };
 
@@ -495,6 +498,23 @@ function Searcher() {
                     ✗ {t('searcher.joinModal.error')}
                   </div>
                 )}
+
+                <div className="form-group checkbox-group">
+                  <label className="checkbox-label">
+                    <input
+                      type="checkbox"
+                      name="legal"
+                      checked={joinFormData.legal}
+                      onChange={handleJoinChange}
+                      required
+                    />
+                    <span>
+                       <a href="/terms" target="_blank" rel="noopener noreferrer">Terms of Service</a> 
+                       {' & '} 
+                       <a href="/privacy" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+                    </span>
+                  </label>
+                </div>
 
                 <div className="modal-footer">
                   <button 

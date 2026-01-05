@@ -69,6 +69,7 @@
       "name": "Ihr Name",
       "email": "Ihre E-Mail",
       "message": "Ihre Nachricht",
+      "legal": "Ich habe die Nutzungsbedingungen und die Datenschutzrichtlinie gelesen und akzeptiere sie",
       "submit": "Nachricht Senden",
       "sending": "Wird gesendet...",
       "success": "Nachricht erfolgreich gesendet!",
@@ -80,6 +81,11 @@
       "location": "Palma de Mallorca, Spanien",
       "hours": "Montag - Freitag: 9:00 - 18:00 Uhr"
     }
+  },
+  "cookie": {
+    "text": "Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung dieser Website stimmen Sie der Verwendung von Cookies zu.",
+    "accept": "Akzeptieren",
+    "reject": "Ablehnen"
   },
   "language": {
     "english": "Englisch",
